@@ -57,10 +57,11 @@ Welcome to **Jaidatech Ventures**! This is a showcase of professional expertise 
 
 ## 📞 Get in Touch
 
-- 📧 Email: [Your Email]
-- 🔗 LinkedIn: [Your Profile]
-- 🐙 GitHub: [Your Profile]
-- 📱 Phone: [Your Number]
+- 📧 Email: adamishaqisah@gmail.com 
+- 🔗 LinkedIn:https://www.linkedin.com/in/
+adam-ishaq-isah-1
+- 🐙 GitHub: github.com//Adamii18 
+- 📱 Phone: (+234)7018971514 / (+234)703028919
 
 ## 📋 Contributing
 
