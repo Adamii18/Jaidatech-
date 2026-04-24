@@ -1,115 +1,328 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Contact Adam II - Get in touch for collaborations and inquiries">
-        <meta name="keywords" content="contact, email, networking, jaidatech">
-        <meta name="author" content="Adam II">
-        <title>Contact Me - Adam II Portfolio</title>
-        <link rel="stylesheet" href="styles.css">
-    </head>
-    <body>
-        <header>
-            <h1>📧 Contact Me</h1>
-            <p>Let's connect and discuss opportunities</p>
-        </header>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact Adam II - Get in touch for collaborations and inquiries">
+  <meta name="keywords" content="contact, email, networking, jaidatech">
+  <meta name="author" content="Adam II">
+  <title>Contact Me — Adam II Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg:        #0a0d14;
+      --surface:   #111520;
+      --card:      #161c2d;
+      --border:    #1f2a40;
+      --accent:    #f0a500;
+      --accent2:   #e06030;
+      --text:      #e8eaf0;
+      --muted:     #7a8099;
+      --green:     #2dca8c;
+      --radius:    14px;
+      --font-head: 'Syne', sans-serif;
+      --font-body: 'DM Sans', sans-serif;
+    }
 
-        <main>
-            <section>
-                <h3>Get in Touch</h3>
-                <p>I'd love to hear from you! Whether you have a question, a collaboration opportunity, or just want to say hello, feel free to reach out.</p>
-            </section>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
 
-            <hr>
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font-body);
+      font-size: 16px;
+      line-height: 1.65;
+      overflow-x: hidden;
+    }
 
-            <section>
-                <h3>📞 Contact Information</h3>
-                <table>
-                    <tr>
-                        <td><strong>📧 Email</strong></td>
-                        <td><a href="mailto:your-email@example.com">adamishaqisah@gmail.com</a></td>
-                    </tr>
-                    <tr>
-                        <td><strong>📱 Phone</strong></td>
-                        <td><a href="tel:+1234567890"> (+234)7018971514 / (+234)7030289194</a></td>
-                    </tr>
-                    <tr>
-                        <td><strong>🔗 LinkedIn</strong></td>
-                        <td><a href="https://www.linkedin.com/in/adam-ishaq-isah-11b4952a0" target="_blank">Visit Profile</a></td>
-                    </tr>
-                    <tr>
-                        <td><strong>🐙 GitHub</strong></td>
-                        <td><a href="https://github.com/Adamii18" target="_blank">@Adamii18</a></td>
-                    </tr>
-                    <tr>
-                        <td><strong>🌐 Website</strong></td>
-                        <td><a href="https://github.com/Adamii18/Jaidatech-" target="_blank">Jaidatech Ventures</a></td>
-                    </tr>
-                </table>
-            </section>
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 0;
+    }
 
-            <hr>
+    a { color: var(--accent); text-decoration: none; transition: opacity .2s; }
+    a:hover { opacity: .75; }
 
-            <section>
-                <h3>✉️ Contact Form</h3>
-                <form action="https://formspree.io/f/mnjldeol" method="POST">
-                    <div style="margin-bottom: 15px;">
-                        <label for="name"><strong>Name:</strong></label><br>
-                        <input type="text" id="name" name="name" placeholder="Your Full Name" required style="width: 100%; padding: 8px; margin-top: 5px; border: 1px solid #ccc; border-radius: 4px;">
-                    </div>
+    .wrapper {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 24px;
+      position: relative;
+      z-index: 1;
+    }
 
-                    <div style="margin-bottom: 15px;">
-                        <label for="email"><strong>Email:</strong></label><br>
-                        <input type="email" id="email" name="email" placeholder="adamishaqisah@gmail.com" required style="width: 100%; padding: 8px; margin-top: 5px; border: 1px solid #ccc; border-radius: 4px;">
-                    </div>
+    /* NAV */
+    nav {
+      position: sticky; top: 0;
+      background: rgba(10,13,20,.85);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border);
+      z-index: 100; padding: 14px 0;
+    }
+    nav .wrapper { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+    .nav-brand { font-family: var(--font-head); font-size: 1.1rem; font-weight: 800; letter-spacing: -.02em; color: var(--accent); }
+    .nav-links { display: flex; gap: 28px; list-style: none; }
+    .nav-links a { color: var(--muted); font-size: .88rem; font-weight: 500; text-transform: uppercase; letter-spacing: .08em; transition: color .2s; }
+    .nav-links a:hover, .nav-links a.active { color: var(--accent); }
 
-                    <div style="margin-bottom: 15px;">
-                        <label for="subject"><strong>Subject:</strong></label><br>
-                        <input type="text" id="subject" name="subject" placeholder="Email Subject" required style="width: 100%; padding: 8px; margin-top: 5px; border: 1px solid #ccc; border-radius: 4px;">
-                    </div>
+    /* PAGE HERO */
+    .page-hero { padding: 64px 0 48px; border-bottom: 1px solid var(--border); margin-bottom: 56px; }
+    .section-label { font-size: .75rem; font-weight: 700; text-transform: uppercase; letter-spacing: .14em; color: var(--accent); margin-bottom: 8px; }
+    .page-hero h1 { font-family: var(--font-head); font-size: clamp(2rem, 4vw, 2.8rem); font-weight: 800; letter-spacing: -.03em; margin-bottom: 12px; }
+    .page-hero p { color: var(--muted); font-size: 1rem; max-width: 500px; }
+    .section-title { font-family: var(--font-head); font-size: 1.4rem; font-weight: 700; letter-spacing: -.02em; margin-bottom: 24px; }
+    .divider { height: 1px; background: var(--border); margin: 52px 0; }
 
-                    <div style="margin-bottom: 15px;">
-                        <label for="message"><strong>Message:</strong></label><br>
-                        <textarea id="message" name="message" placeholder="Your message here..." rows="6" required style="width: 100%; padding: 8px; margin-top: 5px; border: 1px solid #ccc; border-radius: 4px; font-family: Arial, sans-serif;"></textarea>
-                    </div>
+    /* CONTACT GRID */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.4fr;
+      gap: 32px;
+      align-items: start;
+    }
+    @media (max-width: 680px) { .contact-grid { grid-template-columns: 1fr; } }
 
-                    <button type="submit" class="btn" style="cursor: pointer;">Send Message 📤</button>
-                    <button type="reset" class="btn" style="background-color: #95a5a6; cursor: pointer;">Clear Form 🔄</button>
-                </form>
+    /* INFO CARDS */
+    .info-stack { display: flex; flex-direction: column; gap: 12px; }
+    .info-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 16px 20px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      transition: border-color .25s, transform .25s;
+    }
+    .info-card:hover { border-color: var(--accent); transform: translateX(4px); }
+    .info-icon { font-size: 1.4rem; flex-shrink: 0; }
+    .info-label { font-size: .72rem; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); margin-bottom: 3px; }
+    .info-value { font-size: .9rem; font-weight: 500; color: var(--text); }
+    .info-value a { color: var(--text); }
+    .info-value a:hover { color: var(--accent); opacity: 1; }
 
-            </section>
+    .response-banner {
+      background: rgba(45,202,140,.07);
+      border: 1px solid rgba(45,202,140,.25);
+      border-radius: var(--radius);
+      padding: 14px 18px;
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      margin-top: 14px;
+    }
+    .response-banner span { font-size: 1.2rem; flex-shrink: 0; }
+    .response-banner p { font-size: .84rem; color: var(--muted); line-height: 1.5; }
+    .response-banner strong { color: var(--green); }
 
-            <hr>
+    /* FORM */
+    .form-card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 28px 24px; }
+    .form-group { margin-bottom: 18px; }
+    label { display: block; font-size: .78rem; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); margin-bottom: 7px; }
+    input[type="text"], input[type="email"], textarea {
+      width: 100%;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      color: var(--text);
+      font-family: var(--font-body);
+      font-size: .93rem;
+      padding: 11px 15px;
+      outline: none;
+      transition: border-color .2s, box-shadow .2s;
+    }
+    input::placeholder, textarea::placeholder { color: var(--muted); }
+    input:focus, textarea:focus { border-color: var(--accent); box-shadow: 0 0 0 3px rgba(240,165,0,.12); }
+    textarea { resize: vertical; min-height: 130px; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    @media (max-width: 500px) { .form-row { grid-template-columns: 1fr; } }
+    .form-actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 6px; }
 
-            <section>
-                <h3>💼 Professional Links</h3>
-                <ul>
-                    <li><a href="https://github.com/Adamii18" target="_blank">GitHub Profile</a> - Check out my code repositories</li>
-                    <li><a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a> - Professional networking</li>
-                    <li><a href="https://twitter.com/yourhandle" target="_blank">Twitter</a> - Follow for updates</li>
-                    <li><a href="mailto:your-email@example.com">Email Me Directly</a> - Quick communication</li>
-                </ul>
-            </section>
+    /* BUTTONS */
+    .btn-primary { display: inline-block; background: var(--accent); color: #0a0d14; font-family: var(--font-body); font-weight: 700; font-size: .9rem; padding: 12px 26px; border-radius: 8px; border: none; cursor: pointer; transition: transform .2s, box-shadow .2s; letter-spacing: .02em; }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(240,165,0,.35); color: #0a0d14; opacity: 1; }
+    .btn-ghost { display: inline-block; border: 1px solid var(--border); color: var(--text); font-family: var(--font-body); font-size: .9rem; font-weight: 500; padding: 12px 24px; border-radius: 8px; transition: border-color .2s, background .2s; cursor: pointer; background: transparent; }
+    .btn-ghost:hover { border-color: var(--accent); background: rgba(240,165,0,.06); color: var(--text); opacity: 1; }
 
-            <hr>
+    /* PROFESSIONAL LINKS */
+    .prof-links { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 14px; }
+    .prof-link-card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 18px 20px; display: flex; align-items: center; gap: 12px; transition: border-color .25s, transform .25s; color: var(--text); }
+    .prof-link-card:hover { border-color: var(--accent); transform: translateY(-3px); color: var(--text); opacity: 1; }
+    .prof-link-card .icon { font-size: 1.4rem; }
+    .prof-link-card .pl-name { font-weight: 700; font-size: .92rem; margin-bottom: 2px; }
+    .prof-link-card .pl-desc { font-size: .76rem; color: var(--muted); }
 
-            <section style="text-align: center; background-color: #ecf0f1; padding: 20px; border-radius: 8px;">
-                <h3>Response Time</h3>
-                <p>I typically respond to messages within <strong>24-48 hours</strong>.</p>
-                <p>For urgent matters, please call or use the contact form with "URGENT" in the subject line.</p>
-            </section>
+    /* FOOTER */
+    footer { border-top: 1px solid var(--border); padding: 36px 0; margin-top: 64px; color: var(--muted); font-size: .83rem; }
+    footer .wrapper { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+  </style>
+</head>
+<body>
 
-            <hr>
+  <nav>
+    <div class="wrapper">
+      <a href="index.html" class="nav-brand">Adam II ✦</a>
+      <ul class="nav-links">
+        <li><a href="index.html#skills">Skills</a></li>
+        <li><a href="index.html#experience">Experience</a></li>
+        <li><a href="index.html#projects">Projects</a></li>
+        <li><a href="Contact.html" class="active">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
 
-            <section style="text-align: center;">
-                <a href="index.html" class="btn">← Back to Home</a>
-            </section>
-        </main>
+  <div class="wrapper">
+    <div class="page-hero">
+      <p class="section-label">Let's talk</p>
+      <h1>📧 Contact Me</h1>
+      <p>Have a project in mind or want to collaborate? I'd love to hear from you — send a message or reach out directly.</p>
+    </div>
+  </div>
 
-        <footer>
-            <p>&copy; 2026 Adam II - Jaidatech Ventures. All rights reserved.</p>
-            <p>Licensed under the <a href="LICENSE">MIT License</a></p>
-        </footer>
-    </body>
+  <main>
+    <div class="wrapper">
+
+      <div class="contact-grid">
+
+        <!-- LEFT: Info -->
+        <div>
+          <p class="section-label">Direct contacts</p>
+          <h2 class="section-title">Get in Touch</h2>
+          <div class="info-stack">
+
+            <div class="info-card">
+              <div class="info-icon">📧</div>
+              <div>
+                <div class="info-label">Email</div>
+                <div class="info-value"><a href="mailto:adamishaqisah@gmail.com">adamishaqisah@gmail.com</a></div>
+              </div>
+            </div>
+
+            <div class="info-card">
+              <div class="info-icon">📱</div>
+              <div>
+                <div class="info-label">Phone</div>
+                <div class="info-value">
+                  <a href="tel:+2347018971514">(+234) 7018971514</a><br>
+                  <a href="tel:+2347030289194">(+234) 7030289194</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="info-card">
+              <div class="info-icon">🔗</div>
+              <div>
+                <div class="info-label">LinkedIn</div>
+                <div class="info-value"><a href="https://www.linkedin.com/in/adam-ishaq-isah-11b4952a0" target="_blank">Adam Ishaq Isah</a></div>
+              </div>
+            </div>
+
+            <div class="info-card">
+              <div class="info-icon">🐙</div>
+              <div>
+                <div class="info-label">GitHub</div>
+                <div class="info-value"><a href="https://github.com/Adamii18" target="_blank">@Adamii18</a></div>
+              </div>
+            </div>
+
+            <div class="info-card">
+              <div class="info-icon">🎯</div>
+              <div>
+                <div class="info-label">Fiverr</div>
+                <div class="info-value"><a href="https://fiverr.com/adamishaqisah" target="_blank">@adamishaqisah</a></div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="response-banner">
+            <span>⏱️</span>
+            <p>I typically reply within <strong>24–48 hours</strong>. For urgent matters, add <strong>"URGENT"</strong> in the subject line.</p>
+          </div>
+        </div>
+
+        <!-- RIGHT: Form -->
+        <div>
+          <p class="section-label">Send a message</p>
+          <h2 class="section-title">Contact Form</h2>
+          <div class="form-card">
+            <form action="https://formspree.io/f/mnjldeol" method="POST">
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="name">Your Name</label>
+                  <input type="text" id="name" name="name" placeholder="Full name" required>
+                </div>
+                <div class="form-group">
+                  <label for="email">Your Email</label>
+                  <input type="email" id="email" name="email" placeholder="you@example.com" required>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" name="subject" placeholder="What's this about?" required>
+              </div>
+
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" placeholder="Tell me about your project or question..." required></textarea>
+              </div>
+
+              <div class="form-actions">
+                <button type="submit" class="btn-primary">Send Message 📤</button>
+                <button type="reset" class="btn-ghost">Clear 🔄</button>
+              </div>
+
+            </form>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- PROFESSIONAL LINKS -->
+      <div class="divider"></div>
+      <p class="section-label">Find me online</p>
+      <h2 class="section-title">Professional Links</h2>
+      <div class="prof-links">
+        <a href="https://github.com/Adamii18" target="_blank" class="prof-link-card">
+          <div class="icon">🐙</div><div><div class="pl-name">GitHub</div><div class="pl-desc">Code repositories</div></div>
+        </a>
+        <a href="https://fiverr.com/adamishaqisah" target="_blank" class="prof-link-card">
+          <div class="icon">🎯</div><div><div class="pl-name">Fiverr</div><div class="pl-desc">Hire me for projects</div></div>
+        </a>
+        <a href="https://freelancer.com/u/Adamii18" target="_blank" class="prof-link-card">
+          <div class="icon">💼</div><div><div class="pl-name">Freelancer.com</div><div class="pl-desc">@Adamii18</div></div>
+        </a>
+        <a href="https://www.linkedin.com/in/adam-ishaq-isah-11b4952a0" target="_blank" class="prof-link-card">
+          <div class="icon">🔗</div><div><div class="pl-name">LinkedIn</div><div class="pl-desc">Professional network</div></div>
+        </a>
+        <a href="https://youtube.com/@adamishaqisah" target="_blank" class="prof-link-card">
+          <div class="icon">▶️</div><div><div class="pl-name">YouTube</div><div class="pl-desc">AI education content</div></div>
+        </a>
+        <a href="mailto:adamishaqisah@gmail.com" class="prof-link-card">
+          <div class="icon">📧</div><div><div class="pl-name">Email</div><div class="pl-desc">Direct message</div></div>
+        </a>
+      </div>
+
+      <div class="divider"></div>
+      <a href="index.html" class="btn-ghost">← Back to Home</a>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="wrapper">
+      <span>© 2026 Adam II · Jaidatech Ventures. All rights reserved.</span>
+      <span>Licensed under the <a href="LICENSE">MIT License</a></span>
+    </div>
+  </footer>
+
+</body>
 </html>
