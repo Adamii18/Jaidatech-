@@ -32,28 +32,26 @@ Welcome to **Jaidatech Ventures**! This is a showcase of professional expertise 
 ## 🛠️ Technologies Used
 
 - HTML5
-- CSS3 (Coming Soon)
-- JavaScript (Coming Soon)
+- CSS3 
+- JavaScript
+- Python
+- Flask 
 - Modern Web Standards
 
 ## 📖 Certifications & Training
 
 - The Complete iOS Bootcamp
 - The Complete Web Development Bootcamp
+- Diploma in Data Analysis IDEAS Program
+- Responsive Web Design certification in Freecodecamp.org
+  
 
-## 💼 Professional Experience
-
-| Period | Role |
-|--------|------|
-| 2019-2022 | Tailoring Specialist |
-| 2022-Present | Business Centre Manager |
 
 ## 🎓 Skills
 
-| Skill | Level |
 |-------|-------|
-| Data Analysis | ⭐⭐⭐⭐ |
-| Web Development | ⭐⭐⭐ |
+| Data Analysis 
+| Web Development 
 
 ## 📞 Get in Touch
 
